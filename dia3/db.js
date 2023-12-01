@@ -481,7 +481,8 @@ let mark22 = new MarkModel({
 
 // Calcular el número total de alumnos que hay en el bootcamp incluyendo repetidos.
 // MarkModel.aggregate([
-//     {$count: "Número total de alumnos"}
+//     {$group: {_id: null, totalStudents: {$sum: 1}}},
+//     {$project: {totalStudents: 1, _id: 0}}
 // ])
 // .then((result) => {
 //     console.log(result);
